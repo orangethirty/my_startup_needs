@@ -6,13 +6,13 @@
     <div class="container detail-container">
         <div class="detail-header">
             <div class="detail-header-left">
-                <div class="detail-title"><a href="/" class="detail-title-link">My startup needs</a> <span class="detail-term">{{ object.need }}</span></div>
+                <div class="detail-title"><a href="/" class="detail-title-link">← My startup needs</a> <span class="detail-term">{{ object.need }}</span></div>
             </div>
             <div class="detail-header-right">
                 <ul class="detail-share-list">
                     <li class="detail-share-item share-title">Share</li>
                     <li class="detail-share-item"><a href="https://twitter.com/home?status=My startup needs {{ object.need }} - http://mystartupneeds.com{% url 'need_detail' object.slug %}" target="_blank" class="share-twitter">Twitter</a></li>
-                    <li class="detail-share-item"><a href="#" class="share-facebook">Facebook</a></li>
+                    <li class="detail-share-item"><a href="http://www.facebook.com/sharer/sharer.php?url=http://mystartupneeds.com{% url 'need_detail' object.slug %}&title=My startup needs {{ object.need }}&summary=My startup needs {{ object.need }} - http://mystartupneeds.com{% url 'need_detail' object.slug %}" target="_blank" class="share-facebook">Facebook</a></li>
                 </ul>
             </div>
         </div>
