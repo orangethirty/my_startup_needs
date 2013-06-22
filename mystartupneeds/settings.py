@@ -1,3 +1,4 @@
+import os
 from os.path import abspath, basename, dirname, join, normpath
 
 # Absolute filesystem path to the Django project directory:
@@ -99,7 +100,7 @@ SECRET_KEY = '*e54l6#19o(ob66()(9hh81x1=6ad^y2whl&kjy3ewhc=ck3d&'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+    #'django.template.loaders.eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -131,12 +132,15 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Uncomment the next line to enable the admin:
     'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+
     'need',
 )
+
+TWITTER_CONSUMER_KEY = os.environ.get('TWITTER_CONSUMER_KEY')
+TWITTER_CONSUMER_SECRET = os.environ.get('TWITTER_CONSUMER_SECRET')
+TWITTER_ACCESS_KEY = os.environ.get('TWITTER_ACCESS_KEY')
+TWITTER_ACCESS_SECRET = os.environ.get('TWITTER_ACCESS_SECRET')
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
