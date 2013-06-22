@@ -6,12 +6,12 @@
     <div class="container detail-container">
         <div class="detail-header">
             <div class="detail-header-left">
-                <div class="detail-title">My startup needs <span class="detail-term">{{ object.need }}</span></div>
+                <div class="detail-title"><a href="/" class="detail-title-link">My startup needs</a> <span class="detail-term">{{ object.need }}</span></div>
             </div>
             <div class="detail-header-right">
                 <ul class="detail-share-list">
                     <li class="detail-share-item share-title">Share</li>
-                    <li class="detail-share-item"><a href="#" class="share-twitter">Twitter</a></li>
+                    <li class="detail-share-item"><a href="https://twitter.com/home?status=My startup needs {{ object.need }} - http://mystartupneeds.com{% url 'need_detail' object.slug %}" target="_blank" class="share-twitter">Twitter</a></li>
                     <li class="detail-share-item"><a href="#" class="share-facebook">Facebook</a></li>
                 </ul>
             </div>
@@ -21,8 +21,8 @@
             <div class="detail-comments-wrapper">
                 <div id="disqus_thread"></div>
                 <script type="text/javascript">
-                    var disqus_shortname = 'mystartupneeds';
                     var disqus_developer = 1;
+                    var disqus_shortname = 'mystartupneeds';
 
                     (function() {
                         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -31,7 +31,6 @@
                     })();
                 </script>
                 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
             </div>
         </div>
     </div>

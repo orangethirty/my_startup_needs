@@ -186,6 +186,14 @@ a:hover {
     font-weight: bold;
 }
 
+a.detail-title-link {
+    color:black;
+}
+
+a.detail-title-link:hover {
+    text-decoration: none;
+}
+
 .detail-term {
     border-bottom: 3px solid black;
 }
